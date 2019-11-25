@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [OrangeHRMSuite]">
+  <listeners>
+    <listener class-name="com.orange.hrm.ess.utilities.OHTC05_orange_hrm_ess_listner"/>
+  </listeners>
+  <test thread-count="5" verbose="5" name="ESSTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.orange.hrm.ess.module.testcase.OCT00_orange_hrm_admin_login">
+        <methods>
+          <include name="AdminLogin"/>
+          <include name="setup"/>
+          <include name="verify_all_links"/>
+        </methods>
+      </class> <!-- com.orange.hrm.ess.module.testcase.OCT00_orange_hrm_admin_login -->
+      <class name="com.orange.hrm.ess.module.testcase.OHT021_orange_hrm_ess_myinfo_conatct_details_testcase">
+        <methods>
+          <include name="verify_conact_details" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.orange.hrm.ess.module.testcase.OHT021_orange_hrm_ess_myinfo_conatct_details_testcase -->
+      <class name="com.orange.hrm.ess.module.testcase.OHT01_orange_hrm_ess_login_testcases">
+        <methods>
+          <include name="invalid_valid_credentials"/>
+          <include name="setup"/>
+          <include name="login_using_ess_credentials"/>
+          <include name="verify_all_links"/>
+          <include name="valid_invalid_credentials"/>
+          <include name="invalid_invalid_credentials"/>
+        </methods>
+      </class> <!-- com.orange.hrm.ess.module.testcase.OHT01_orange_hrm_ess_login_testcases -->
+    </classes>
+  </test> <!-- ESSTest(failed) -->
+</suite> <!-- Failed suite [OrangeHRMSuite] -->
